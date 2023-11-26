@@ -1,38 +1,80 @@
-.App {
-  text-align: center;
+body{
+    display: flex;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(216, 12%, 8%);
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Overpass', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main{
+    width: 22vw;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: linear-gradient(hsl(213, 19%, 18%),hsl(216, 12%, 8%));
+    box-shadow: 0 17px 19px 0 rgba(0, 0, 0, 0.2), 0 16px 120px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 25px;
+    gap: 1rem;
+    padding: 2rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.main h1{
+    color: white;
+    margin-bottom: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.main p {
+    margin-top: 0;
+    color: hsl(217, 12%, 63%);
+    line-height: 1.5rem;
 }
 
-.App-link {
-  color: #61dafb;
+.ratingComponent{
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ratingCircle{
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(213, 19%, 18%);
+    color: hsl(217, 12%, 63%);
+    user-select: none;
+}
+
+.ratingCircle:hover{
+    background-color: hsl(25, 97%, 53%);
+    color: white;
+}
+
+.submitBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.submitBtn button{
+    border-radius: 25px;
+    padding: .8rem 9.5rem;
+    letter-spacing: .1rem;
+    outline: none;
+    border: none;
+    background-color:  hsl(25, 97%, 53%);
+    color: white;
+}
+
+.submitBtn button:hover{
+    color:hsl(25, 97%, 53%);
+    background-color: white;
 }
