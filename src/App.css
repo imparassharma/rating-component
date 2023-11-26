@@ -9,13 +9,26 @@ body{
     font-family: 'Overpass', sans-serif;
 }
 
+.mainSection{
+    display: flex;
+    text-align: center;
+}
+
+.warningContainer{
+    position: absolute;
+    width: 50%;
+    color: rgb(249, 88, 88);
+    bottom: 9.5rem;
+    right: 26.6rem;
+}
+
 .main{
     width: 22vw;
     height: 50vh;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    background: linear-gradient(hsl(213, 19%, 18%),hsl(216, 12%, 8%));
+    background: linear-gradient(160deg, hsl(213, 19%, 18%),hsl(216, 12%, 8%));
     box-shadow: 0 17px 19px 0 rgba(0, 0, 0, 0.2), 0 16px 120px 0 rgba(0, 0, 0, 0.19);
     border-radius: 25px;
     gap: 1rem;
@@ -51,6 +64,7 @@ body{
     background-color: hsl(213, 19%, 18%);
     color: hsl(217, 12%, 63%);
     user-select: none;
+    transition: background-color 0.2s, color 0.2s;
 }
 
 .ratingCircle:hover{
@@ -62,6 +76,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 1rem;
 }
 
 .submitBtn button{
@@ -72,9 +87,14 @@ body{
     border: none;
     background-color:  hsl(25, 97%, 53%);
     color: white;
+    transition: background-color 0.2s, color 0.2s;
 }
 
 .submitBtn button:hover{
-    color:hsl(25, 97%, 53%);
-    background-color: white;
+    color:hsl(25, 97%, 53%) !important;
+    background-color: white !important;
+}
+
+.hidden{
+    display: none !important;
 }
