@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 
+interface RatingChange{
+    onRatingChange:(rating:number)=>void;
+}
 
-const Rating:React.FC=() =>{
+const Rating:React.FC<RatingChange>=({onRatingChange}) =>{
       
     const [rate,setRate] = useState <number[]>([1,2,3,4,5]);
     const [userRating, setUserRating] = useState<number>(0);
@@ -9,6 +12,7 @@ const Rating:React.FC=() =>{
     const handleClick = (e:React.MouseEvent<HTMLElement>,id:number)=>{
         
         setUserRating(id);
+        onRatingChange(id);
         //hiding the warning message
         const warning = document.getElementById('warning');
         warning?.classList.add('hidden');
@@ -33,19 +37,13 @@ const Rating:React.FC=() =>{
         if(userRating>0 && userRating<5)
         {
             const warning = document.getElementById('warning');
-            const ratingComponent = document.getElementById('rating-component');
-            ratingComponent?.classList.add('hidden');
-            const submitbtn = document.getElementById('submit-btn');
-            submitbtn?.classList.add("hidden");
-            const headtext = document.getElementById('heading-text');
-            if(headtext)
-            headtext.innerHTML = "Thank You!";
-            const innertext = document.getElementById('inner-text');
-            if(innertext)
-            innertext.innerHTML = 'We appriciate you taking the time to give a rating.If you ever need more support, don\'t hesitate to get in touch! '
-            const logo = document.getElementById('logo');
-            logo?.classList.add('hidden');
             warning?.classList.add('hidden');
+            const afterSubmit = document.getElementById('after-submit');
+            const beforSubmit = document.getElementById('before-submit');
+
+            beforSubmit?.classList.add('hidden');
+            afterSubmit?.classList.remove('hidden');
+
         }
         else{
             const warning = document.getElementById('warning');
