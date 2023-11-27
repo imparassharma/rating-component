@@ -15,9 +15,6 @@ function App(){
     }
    
     return(
-       
-        <div className="mainSection">
-
           <div className="main">
             <div className="afterSubmit hidden" id='after-submit'>
               <img className='thankyouComponent' id='thankyou-graphic' src={img2}/>
@@ -34,13 +31,12 @@ function App(){
               <p id='innerBefore-text'>Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
               <Rating onRatingChange={handleRatingChange}/>
             </div>
+            <div className="warningContainer hidden" id='warning'>
+              <p>Please choose a rating!</p>
+            </div>
           </div>
 
-          <div className="warningContainer hidden" id='warning'>
-            <p>Please choose a rating!</p>
-          </div>
-
-        </div>
+  
     )
 
 }

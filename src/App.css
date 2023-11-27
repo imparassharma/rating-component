@@ -9,26 +9,16 @@ body{
     font-family: 'Overpass', sans-serif;
 }
 
-.warningContainer{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    width: 50%;
-    color: rgb(249, 88, 88);
-    bottom: 9.5rem;
-    right: 26.6rem;
-}
-
 .main{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 22vw;
     background: linear-gradient(160deg, hsl(213, 19%, 18%),hsl(216, 12%, 8%));
     box-shadow: 0 17px 19px 0 rgba(0, 0, 0, 0.2), 0 16px 120px 0 rgba(0, 0, 0, 0.19);
     border-radius: 25px;
     padding: 2.5rem;
+    width: 22.5rem;
+    height: 22.5rem;
 }
 
 .main h1{
@@ -46,6 +36,7 @@ body{
     display: flex;
     flex-direction: column;
     gap: 1rem;
+  
 }
 
 .ratingComponent{
@@ -57,8 +48,8 @@ body{
 }
 
 .ratingCircle{
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
     border-radius: 100px;
     display: flex;
     align-items: center;
@@ -81,6 +72,7 @@ body{
 }
 
 .submitBtn button{
+    font-size: 14px;
     border-radius: 25px;
     padding: .8rem 9.5rem;
     letter-spacing: .1rem;
@@ -107,8 +99,6 @@ body{
 }
 
 .thankyouComponent{
-    width: 10vw;
-    height: 15vh;
     padding-bottom: 1rem;
 }
 
@@ -133,6 +123,62 @@ body{
 }
 
 #innerAfter-text{
-    width: 98%;
     text-align: center;
+}
+
+.warningContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 50%;
+    bottom: 9.5rem;
+    right: 26.6rem;
+}
+
+.warningContainer p{
+    color: rgb(249, 88, 88);
+}
+
+
+@media screen and (max-width:400px) {
+
+    .main{
+        width: 15.5rem;
+        padding: 1rem 2.5rem;
+    }
+
+    .main h1{
+        font-size: 24px;
+    }
+
+    .main p{
+        font-size: 14px;
+    }
+
+    #logo{
+        width: 2.5rem;
+    }
+
+    .ratingComponent {
+        gap: 1rem;
+    }
+
+    .ratingCircle{
+        width: 4rem;
+        height: 2.5rem;
+    }
+
+    .submitBtn button{
+        padding: .8rem 7rem;
+    }
+
+    .beforeSubmit{
+        width: 17.5rem;
+    }    
+
+    #innerAfter-text{
+        width: 18rem;
+        margin: 0;
+    }
 }
